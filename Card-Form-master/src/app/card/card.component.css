@@ -1,0 +1,13 @@
+.modal-content {
+  width: max-content;
+}
+
+
+
+hr{
+  border-top: 1px solid #f8f9fa;
+}
+label.required::after {
+  content: "*";
+  color: red;
+}

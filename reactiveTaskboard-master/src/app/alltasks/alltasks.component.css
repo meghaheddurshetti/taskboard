@@ -1,0 +1,162 @@
+.head {
+  height: 101px;
+}
+label.date1 {
+  background-color:#007bff;
+  color: white;
+  padding: 8px 8px;
+  border-radius: 17px;
+  margin-left: -17px;
+}
+ label.priority {
+  font-weight: 700;
+  font-size: larger;
+  padding: 3px 18px;
+  background-color: red;
+  border-radius: 14px;
+  color: white;
+}
+.prio {
+  float: right;
+  margin-top: -46px;
+  margin-right: 80px;
+}
+button.btn.btn-primary.edit12 {
+  float: right;
+  margin-top: -46px;
+  padding: 7px 19px;
+  font-weight: 700;
+}
+.firstContainer {
+  height: auto;
+  float: left;
+  /* margin-left: 1px; */
+  margin-right: 27px;
+  border: 5px solid white;
+    border-radius: 7px;
+    margin-top: 13px;
+    margin-left: 28px;
+
+}
+
+.cardhead{
+
+  height: auto;
+  margin-bottom: -2px;
+  margin-top: 2px;
+}
+
+
+
+
+.SecondContainer{
+  float: left;
+  height: auto;
+  border: 5px solid white;
+  border-radius: 7px;
+  margin-top: 13px;
+
+  margin-right: 27px;
+
+
+}
+.ThirdContainer{
+  float: left;
+  height: auto;
+  border: 5px solid white;
+    border-radius: 7px;
+    margin-top: 13px;
+
+  margin-right: 27px;
+}
+.FourthContainer{
+  float: left;
+  height: auto;
+  border-radius: 7px;
+    border: 5px solid white;
+    margin-top: 13px;
+  margin-right: 27px;
+
+
+}
+.FiveContainer{
+  float: left;
+  height: auto;
+  margin-right: 27px;
+  border-radius: 7px;
+    border: 5px solid white;
+    margin-top: 13px;
+
+
+}
+
+.SixthContainer{
+
+  float: left;
+  height: auto;
+  border-radius: 7px;
+    border: 5px solid white;
+
+    margin-top: 13px;
+}
+
+.maincontainer {
+  background-color: #e9ecef;
+}
+
+.below{
+  margin-top: 15px;
+}
+div#toDo {
+  height: 189px;
+  margin-top: 13px;
+  margin-bottom: 21px;
+}
+.card-body {
+  background-color: #e9ecef;
+  height: -15px;
+}
+.trdsec{
+  margin-top: 2px;
+  margin-bottom: -2px;
+}
+.frdsec{
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+.fivsec{
+  margin-top: -6px;
+  margin-bottom: 6px;
+}
+.sixsec{
+  margin-top: -9px;
+  margin-bottom: 9px;
+}
+.maincontainer {
+  background-color:#dee2e6;
+  height: 1000px;
+}
+.secondcard{
+  margin-top: 13px;
+  margin-bottom: -9px;
+}
+.container-fluid {
+  background-color: #f8f9fa;
+  color: black;
+}
+a.navbar-brand.headbrand {
+  color: black;
+}
+.navhead {
+
+  float: right;
+  margin-left: 187px;
+  margin-top: -39px;
+  font-size: unset;
+  background-color: #86cf15;
+  color: white;
+  font-weight: bolder;
+  padding: 3px 4px;
+  border: none;
+  border-radius: 15px;
+}

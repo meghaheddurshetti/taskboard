@@ -1,0 +1,194 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<h1>Task Board</h1>
+<div style="background-color: lightgray">
+<div class="row">
+    <div class="card">
+      <h3>To Do</h3>
+      <div class="card" *ngFor="let item of arr;let i=index">
+        <div class="container" >
+            <div class="card-body">{{item.desc}}</div>
+            <div class="card-footer ">
+              <label background-color="blue" class="DD">Due Date:{{item.due_date}}</label>&nbsp;
+              <label class="PR">{{item.priority}}</label>&nbsp;
+              <label><button class="btn btn-primary"  aria-label="Left Align" (click)="openEdit(content,i)">Edit</button></label>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="col">
+    <div class="card">
+      <h3>IN Progress</h3>
+      <div class="card" *ngFor="let item of in_progress;let i=index">
+          <div class="container" >
+              <div class="card-body">{{item.desc}}</div>
+              <div class="card-footer"><label background-color="blue" class="DD">Due Date:{{item.due_date}}</label>&nbsp;
+                <label class="PR">{{item.priority}}</label>&nbsp;
+                <label><button class="btn btn-primary" aria-label="Left Align" (click)="openEdit(content,i)">Edit</button></label></div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card">
+      <h3>Ready for QA</h3>
+      <div class="card" *ngFor="let item of qa;let i=index">
+          <div class="container" >
+              <div class="card-body">{{item.desc}}</div>
+              <div class="card-footer"><label background-color="blue" class="DD">{{item.due_date}}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="PR">{{item.priority}}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><button class="btn btn-primary" aria-label="Left Align" (click)="openEdit(content,i)">Edit</button></label></div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <h3>Unit Testing</h3>
+      <div class="card" *ngFor="let item of ut;let i=index">
+          <div class="container" >
+              <div class="card-body">{{item.desc}}</div>
+              <div class="card-footer"><label background-color="blue" class="DD">{{item.due_date}}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="PR">{{item.priority}}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><button class="btn btn-primary" aria-label="Left Align" (click)="openEdit(content,i)">Edit</button></label></div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+<div class="col">
+    <div class="card">
+      <h3>System Testing</h3>
+      <div class="card" *ngFor="let item of st;let i=index">
+          <div class="container" >
+              <div class="card-body">{{item.desc}}</div>
+              <div class="card-footer"><label background-color="blue" class="DD">{{item.due_date}}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="PR">{{item.priority}}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><button class="btn btn-primary" aria-label="Left Align" (click)="openEdit(content,i)">Edit</button></label></div>
+          </div>
+        </div>
+    </div>
+  </div>
+<div class="col">
+    <div class="card">
+      <h3>Ready for Use</h3>
+      <div class="card" *ngFor="let item of use;let i=index">
+          <div class="container" >
+              <div class="card-body">{{item.desc}}</div>
+              <div class="card-footer"><label background-color="blue" class="DD">{{item.due_date}}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="PR">{{item.priority}}</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                <label><button class="btn btn-primary" aria-label="Left Align" (click)="openEdit(content,i)">Edit</button></label></div>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Edit Tasks</h4>
+      <button type="button" class="close bg bg-danger" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">Close</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form #f="ngForm">
+              <div class="form-group">
+          <label for="task_id">Task Id</label>
+            <p><label>{{task_id}}</label></p>
+        </div>
+
+        <div class="form-group ">
+          <label for="description">Title</label>
+          <div class="input-group">
+            <input id="title" class="form-control" [(ngModel)]="title" class="form-control" placeholder="title" name="title">
+            <div class="input-group-append">
+            </div>
+          </div>
+        </div>
+
+          <div class="form-group">
+      <label for="due_date">Due Date</label>
+      <div class="input-group">
+        <input id="due_date" class="form-control" [(ngModel)]="due_date" class="form-control" placeholder="due_date" name="due_date">
+        <div class="input-group-append">
+         </div>
+      </div>
+    </div>
+
+      <div class="form-group">
+  <label for="desc">Description</label>
+  <div class="input-group">
+    <input id="desc" class="form-control" [(ngModel)]="desc" class="form-control" placeholder="desc" name="desc">
+    <div class="input-group-append">
+     </div>
+  </div>
+</div>
+
+  <div class="form-group">
+<label for="assigned_to">Assigned To</label>
+<div class="input-group">
+<input id="assigned_to" class="form-control" [(ngModel)]="assigned_to" class="form-control" placeholder="assigned_to" name="assigned_to">
+<div class="input-group-append">
+ </div>
+</div>
+</div>
+
+  <div class="form-group">
+<label for="assigned_date">Assigned Date</label>
+<div class="input-group">
+<input id="assigned_date" class="form-control" [(ngModel)]="assigned_date" class="form-control" placeholder="assigned_date" name="assigned_date">
+<div class="input-group-append">
+ </div>
+</div>
+</div>
+
+  <div class="form-group">
+<label for="comments">Comments</label>
+<div class="input-group">
+<input id="comments" class="form-control" [(ngModel)]="comments" class="form-control" placeholder="comments" name="comments">
+<div class="input-group-append">
+ </div>
+</div>
+</div>
+
+<select id= "priority" class = "btn btn-info" class="caret"  name="priority">priority
+    <option selected>Priority</option>
+     <option value="1">High</option>
+     <option value="2">Medium</option>
+     <option value="3">Low</option>
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select id= "selectid" class = "btn btn-info" class="caret"  name="status"  (change)="modo($event.target.value)">
+      <option selected>Status</option>
+      <!-- <option value=" ">ToDo</option> -->
+       <option value="mod2">In Progress</option>
+       <option value="mod3">Ready for QA</option>
+       <option value="mod4">Unit Testing</option>
+       <option value="mod5">System Testing</option>
+       <option value="mod6">Ready for Use</option>
+  </select>
+
+  <!-- <select [(ngModel)]="status" >
+      <option value="">ToDo</option>
+      <option value="mod2">In Progress</option>
+      <option value="mod3">Ready for QA</option>
+      <option value="mod4">Unit Testing</option>
+      <option value="mod5">System Testing</option>
+      <option value="mod6">Ready for Use</option>
+</select> -->
+
+
+
+     <div class="modal-footer">
+         <button type="submit" class="btn btn-success" (click)='pushCard()'>Apply</button>
+        <button type="reset" class="btn btn-danger" aria-label="cancel" (click)="modal.dismiss('Cross click')">cancel</button>
+        </div>
+        </form>
+        </div>
+   </ng-template>

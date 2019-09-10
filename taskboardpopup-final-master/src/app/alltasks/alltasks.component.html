@@ -1,0 +1,277 @@
+<!-- Dispay data--------------- -->
+
+
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> -->
+          <a class="navbar-brand headbrand" href="#"><h2>Task Boards-</h2><h3 CLASS="navhead">YOURDRS WEBAPP</h3></a>
+
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function($scope) {
+      $scope.names = ["Emil", "Tobias", "Linus"];
+  });
+  </script> -->
+
+<div class="maincontainer">
+
+
+
+<div class="firstContainer" >
+  <h2>Todo</h2>
+<div class="card 123 secondcard" *ngFor="let item of arr; let i=index"  style="width: 18rem;">
+    <div class="midlecard" *ngIf="item.status=='todo'">
+  <div class="head hedsec">
+    <p class="card-text">{{item.description}}</p>
+  </div>
+  <div class="card-body bodysec">
+    <div class="datehead">
+    <label class="date1">{{item.dueDate}}</label>
+  </div>
+  <div class="prio">
+    <label class="priority">{{item.priority}} </label>
+  </div>
+
+  <button class="btn btn-primary edit12" (click)="EditItem(i)"  data-toggle="modal" data-target="#exampleModal" >Edit</button>
+  </div>
+
+</div>
+</div>
+
+
+</div>
+
+
+ <div class="SecondContainer">
+   <h2>In progress</h2>
+    <div class="card 123 cardhead crdtop" style="width: 18rem;"  *ngFor="let item of arr ; let i=index ">
+      <div class="midlecard" *ngIf="item.status=='in progress'">
+      <div class="head ">
+        <p class="card-text">{{item.description}}</p>
+      </div>
+      <div class="card-body">
+        <div class="datehead">
+        <label class="date1">{{item.dueDate}}</label>
+      </div>
+      <div class="prio">
+        <label class="priority">{{item.priority}}</label>
+      </div>
+
+      <button class="btn btn-primary edit12" (click)="EditItem(i)"  data-toggle="modal" data-target="#exampleModal" >Edit</button>
+      </div>
+    </div>
+    </div>
+   </div>
+
+    <div class="ThirdContainer">
+      <h2>Development</h2>
+        <div class="card 123 trdsec" style="width: 18rem;"  *ngFor="let item of arr ; let i=index ">
+          <div class="midlecard" *ngIf="item.status=='development completed'">
+            <div class="head">
+            <p class="card-text">{{item.description}}</p>
+          </div>
+          <div class="card-body">
+            <div class="datehead">
+            <label class="date1">{{item.dueDate}}</label>
+          </div>
+          <div class="prio">
+            <label class="priority">{{item.priority}} </label>
+          </div>
+
+          <button class="btn btn-primary edit12" (click)="EditItem(i)"  data-toggle="modal" data-target="#exampleModal" >Edit</button>
+          </div>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="FourthContainer">
+          <h2>Ready for QA</h2>
+            <div class="card 123 frdsec" style="width: 18rem;"  *ngFor="let item of arr ; let i=index ">
+              <div class="midlecard" *ngIf="item.status=='QA progress'">
+                <div class="head">
+                <p class="card-text">{{item.description}}</p>
+              </div>
+              <div class="card-body">
+                <div class="datehead">
+                <label class="date1">{{item.dueDate}}</label>
+              </div>
+              <div class="prio">
+                <label class="priority">{{item.priority}} </label>
+              </div>
+
+              <button class="btn btn-primary edit12" (click)="EditItem(i)"  data-toggle="modal" data-target="#exampleModal" >Edit</button>
+              </div>
+            </div>
+            </div>
+            </div>
+
+
+            <div class="FiveContainer">
+              <h2>System Testing</h2>
+                <div class="card 123 fivsec" style="width: 18rem;" *ngFor="let item of arr ; let i=index ">
+                  <div class="midlecard" *ngIf="item.status=='system testing'">
+                    <div class="head">
+                    <p class="card-text">{{item.description}}</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="datehead">
+                    <label class="date1">{{item.dueDate}}</label>
+                  </div>
+                  <div class="prio">
+                    <label class="priority">{{item.priority}} </label>
+                  </div>
+
+                  <button class="btn btn-primary edit12" (click)="EditItem(i)"  data-toggle="modal" data-target="#exampleModal" >Edit</button>
+                  </div>
+                </div>
+                </div>
+                </div>
+
+
+                <div class="SixthContainer">
+                  <h2>Completed</h2>
+                    <div class="card 123 sixsec" style="width: 18rem;" *ngFor="let item of arr ; let i=index ">
+                      <div class="midlecard" *ngIf="item.status=='system testing completed'">
+                        <div class="head">
+                        <p class="card-text">{{item.description}}</p>
+                      </div>
+                      <div class="card-body">
+                        <div class="datehead">
+                        <label class="date1">{{item.dueDate}}</label>
+                      </div>
+                      <div class="prio">
+                        <label class="priority">{{item.priority}} </label>
+                      </div>
+
+                      <button class="btn btn-primary edit12" (click)="EditItem(i)"  data-toggle="modal" data-target="#exampleModal" >Edit</button>
+                      </div>
+                    </div>
+                    </div>
+
+                  </div>
+
+
+
+<!-------------POP UP---->
+<!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+
+              <div class="container-fluid">
+
+                  <h1>Update Details</h1>
+                <form (ngSubmit)="UpdateItem(f)" #f="ngForm" >
+
+
+
+                    <div class="form-group" >
+                      <label>Task ID</label>
+                      <input name="taskId" [(ngModel)]="taskId"  type="text" class="form-control" placeholder="Task ID ">
+
+                    </div>
+
+                    <div class="form-group" >
+                        <label>TITLE</label>
+                        <input name="title"  [(ngModel)]="title"  type="text" class="form-control" placeholder="Enter Title ">
+
+                      </div>
+
+                      <div class="form-group" >
+                          <label>Due Date</label>
+                          <input name="dueDate"  [(ngModel)]="dueDate"  type="text" class="form-control" placeholder="Enter Due date ">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Priority</label>
+                            <form action="" >
+                                <input  type="radio"  [(ngModel)]="priority" name="Priority"  [value]="priority"> LOW<br>
+                                <input type="radio"  [(ngModel)]="priority" name="Priority" [value]="priority"> MED<br>
+                                <input type="radio"  [(ngModel)]="priority" name="Priority" [value]="priority"> HIGH
+                              </form>
+                        </div>
+
+                        <div class="form-group" >
+                            <label>DECSRIPTION</label>
+                            <input name="description" [(ngModel)]="description" type="text" class="form-control" placeholder="DECSRIPTION">
+                          </div>
+
+                          <div class="form-group" >
+                              <label>Assigned To</label>
+                              <input name="assignedTo" [(ngModel)]="assignedTo" type="text" class="form-control" placeholder="Enter Assigned to">
+                            </div>
+
+                            <div class="form-group" >
+                                <label>Assigned date</label>
+                                <input name="assignedDate" [(ngModel)]="assignedDate" type="text" class="form-control" placeholder="Enter date">
+                              </div>
+
+                    <div class="form-group" >
+                      <label>comments</label>
+                      <input name="comments"[(ngModel)]="comments" type="text"  class="form-control" placeholder="Enter comments">
+                    </div>
+
+
+                    <!-- <select id="selectid" class="form-control-mb-12" (change)="modo($event.target.value)">
+                      <option value="mod1">To Do</option>
+                      <option value="mod2">In Progress</option>
+                      <option value="mod3">Development</option>
+                      <option value="mod4">Ready for QA</option>
+                      <option value="mod5">Read for system testing</option>
+                      <option value="mod6">ST Completed</option>
+                   </select> -->
+
+                   <select [(ngModel)]="status" class="custom-select" name="status">
+                     <option value="">choose your status</option>
+                     <option *ngFor="let item of arr1" [value]="item.status1">{{item.status1}}</option>
+                   </select>
+                   <button  type="submit" class="form-control btn btn-primary" >Save User</button>
+
+                  </form>
+                </div>
+
+          </div>
+          <div class="modal-footer">
+              <!-- <button  type="submit" class="form-control btn btn-primary" >Save User</button> -->
+
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>

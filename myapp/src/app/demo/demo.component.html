@@ -1,0 +1,26 @@
+<h1>{{no}}</h1>
+<button [disabled]="flag" (click)="onClick()" >Click Me</button>
+<button (click)="onClickOnOff()"  >on/off</button>
+<input type="text" [value]="str" >
+
+<input type="text" [(ngModel)]="str1"  >
+<h1 appHighlighter >{{str1}}</h1>
+
+<hr>
+<input appCard>
+<hr>
+<input #input1 (keyup)="0" >
+<table class="table">
+  <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Status</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of arrtask | filter:input1.value ">
+      <td >{{item.id  }}</td>
+      <td  >{{item.title}}</td>
+      <td> {{item.status}}</td>
+    </tr>
+  </tbody>
+</table>
